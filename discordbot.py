@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from os import environ
 
 client = commands.Bot(command_prefix = '/')
 game = discord.Game("in goodstuff!")
@@ -7,6 +8,7 @@ lastHost = ''
 lastStarting = ''
 lastMessageID = ''
 lastTitle = ''
+discordToken = environ.get.discordToken
 
 @client.event
 async def on_ready():
@@ -120,7 +122,7 @@ async def recruitmentend(ctx, arg):
         await channel.send(embed=embed)
         await ctx.send(':white_check_mark: Event successfully posted, '+ctx.message.author.mention)
         
-client.run('NjY0MjUyMDkxMzcxMzU2MTk1.XhUW-w.0qWRaWEjYd51mAvSQmeFOUsWcUo')
+client.run(discordToken)
 
 
 
