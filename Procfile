@@ -1,1 +1,1 @@
-worker: marketsecretary.py
+worker: python marketsecretary.py
