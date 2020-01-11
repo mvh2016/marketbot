@@ -8,7 +8,7 @@ lastHost = ''
 lastStarting = ''
 lastMessageID = ''
 lastTitle = ''
-discordToken = environ.get.discordToken
+discordToken = environ.get('discordToken')
 
 @client.event
 async def on_ready():
