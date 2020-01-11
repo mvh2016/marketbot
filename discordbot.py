@@ -181,16 +181,16 @@ async def on_message(message):
                             await message.add_reaction('✅')
 
                         else:
-                            await channel.send('Improper formatting, '+message.author.mention)
+                            await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
                         
                     else:
-                        await channel.send('Improper formatting, '+message.author.mention)
+                        await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
                     
                 else:
-                    await channel.send('Improper formatting, '+message.author.mention)
+                    await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
     
             else:
-                await channel.send('Improper formatting, '+message.author.mention)
+                await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
             
             
         else:
