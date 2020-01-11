@@ -139,6 +139,7 @@ async def on_message(message):
     postChannel = client.get_channel(665346430298488845)
     msgChannel = str(message.channel)
     goodchannel = 'event-logs'
+    goodchannel2 = 'event-logs-checking'
     if msgChannel not in goodchannel:
         pass
     else:
@@ -195,5 +196,14 @@ async def on_message(message):
             
         else:
             pass
+        
+    if msgChannel not in goodchannel2:
+        pass
+    else:
+        if message.content in '<@&663190515323371540> <@&663192507936538664>':
+            pass
+        else:
+            await message.add_reaction('✅')
+            await message.add_reaction('❌')
     
 client.run(discordToken)
