@@ -15,7 +15,7 @@ async def on_ready():
     print ('Bot is ready.')
     await client.change_presence(activity=game)
     embed = discord.Embed(
-       title = '**Bot is Online**',
+       title = '**:white_check_mark: Market Secretary is Online**',
        colour = discord.Colour.green()
     )
         
