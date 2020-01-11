@@ -197,13 +197,5 @@ async def on_message(message):
         else:
             pass
         
-    if msgChannel not in goodchannel2:
-        pass
-    else:
-        if message.content in '<@&663190515323371540> <@&663192507936538664>':
-            pass
-        else:
-            await message.add_reaction('✅')
-            await message.add_reaction('❌')
     
 client.run(discordToken)
