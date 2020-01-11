@@ -177,7 +177,7 @@ async def on_message(message):
                             
                             await postChannel.send(embed=embed)
                             await postChannel.send('<@&663190515323371540> <@&663192507936538664>')
-                            await channel.send(':white_check_mark: Event successfully posted, '+message.author.mention)
+                            await channel.send(':white_check_mark: Your log has been accepted! Wait up to 24 hours for a HoD+ to review your log and allocate points. '+message.author.mention)
 
                         else:
                             await channel.send('Improper formatting, '+message.author.mention)
