@@ -180,16 +180,16 @@ async def on_message(message):
                             await channel.send(':white_check_mark: Your log has been accepted! Wait up to 24 hours for a HoD+ to review your log and allocate points. '+message.author.mention)
 
                         else:
-                            await channel.send('Improper formatting, '+message.author.mention)
+                            await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
                         
                     else:
-                        await channel.send('Improper formatting, '+message.author.mention)
+                        await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
                     
                 else:
-                    await channel.send('Improper formatting, '+message.author.mention)
+                    await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
     
             else:
-                await channel.send('Improper formatting, '+message.author.mention)
+                await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
             
             
         else:
