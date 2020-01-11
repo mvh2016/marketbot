@@ -8,7 +8,7 @@ lastHost = ''
 lastStarting = ''
 lastMessageID = ''
 lastTitle = ''
-discordToken = environ.get('discordToken')
+discordToken = environ.get.discordToken
 
 @client.event
 async def on_ready():
@@ -177,19 +177,20 @@ async def on_message(message):
                             
                             await postChannel.send(embed=embed)
                             await postChannel.send('<@&663190515323371540> <@&663192507936538664>')
-                            await channel.send(':white_check_mark: Your log has been accepted! Wait up to 24 hours for a HoD+ to review your log and allocate points. '+message.author.mention)
+                            await channel.send(':white_check_mark: Event successfully posted, '+message.author.mention)
+                            await message.add_reaction('✅')
 
                         else:
-                            await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
+                            await channel.send('Improper formatting, '+message.author.mention)
                         
                     else:
-                        await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
+                        await channel.send('Improper formatting, '+message.author.mention)
                     
                 else:
-                    await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
+                    await channel.send('Improper formatting, '+message.author.mention)
     
             else:
-                await channel.send(':warning: Your log has been denied due to formatting issues! Read pinned messages. The format is case sensitive! , '+message.author.mention)
+                await channel.send('Improper formatting, '+message.author.mention)
             
             
         else:
