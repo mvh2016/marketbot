@@ -3,7 +3,7 @@ from discord.ext import commands
 from os import environ
 
 client = commands.Bot(command_prefix = '/')
-game = discord.Game("in goodstuff!")
+game = discord.Game("in the park! | /commands for help")
 lastHost = ''
 lastStarting = ''
 lastMessageID = ''
@@ -15,7 +15,7 @@ async def on_ready():
     print ('Bot is ready.')
     await client.change_presence(activity=game)
     embed = discord.Embed(
-       title = '**:white_check_mark: Market Secretary is Online**',
+       title = '**:white_check_mark: Park Event Logger is Online**',
        colour = discord.Colour.green()
     )
         
@@ -26,13 +26,13 @@ async def on_ready():
 async def commands(ctx):
     
     embed = discord.Embed(
-        title = '**How to Use the Market Secretary Bot**',
+        title = '**How to Use the Park Event Logger Bot**',
         colour = discord.Colour.blue(),
         description = 'A simple list of commands and their correct usage!'
     )
     
-    embed.add_field(name = '/sessionstart <Start Time> "<Any Notes>"' , value = 'Sends a Supermarket Session start notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/sessionstart 00:00 "Fall in near the gate!`"', inline = 'false')    
-    embed.add_field(name = '/sessionend "<Any Notes>"', value = 'Sends a Supermarket Session end notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/sessionend "Thank you for attending!"`', inline = 'false')
+    embed.add_field(name = '/sessionstart <Start Time> "<Any Notes>"' , value = 'Sends a Amusement Park Session start notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/sessionstart 00:00 "Fall in near the gate!`"', inline = 'false')    
+    embed.add_field(name = '/sessionend "<Any Notes>"', value = 'Sends a Amusement Park Session end notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/sessionend "Thank you for attending!"`', inline = 'false')
     embed.add_field(name = '/recruitmentstart <Start Time> "<Any Notes"', value = 'Sends a Recruitment Session start notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/recruitmentstart 00:00 "Fall in near the gate!`"', inline = 'false')
     embed.add_field(name = '/recruitmentend "<Any Notes>"', value = 'Sends a Recruitment Session end notification. \n Remember to use quotations for the Any Notes section. \n e.g. `/recruitmentend "Thank you for attending!"`', inline = 'false')
     
@@ -48,7 +48,7 @@ async def sessionstart(ctx, arg1, arg2):
     else:
         messageAuthor = ctx.message.author.mention
         embed = discord.Embed(
-            title = '**:calendar: Supermarket Session Scheduled :calendar:**',
+            title = '**:calendar: Amusement Park Session Scheduled :calendar:**',
             colour = discord.Colour.purple()
         )
         embed.add_field(name = 'Host', value = '{}'.format(messageAuthor), inline = 'false')
@@ -70,7 +70,7 @@ async def sessionend(ctx, arg):
     else:
         messageAuthor = ctx.message.author.mention
         embed = discord.Embed(
-            title = '**:alarm_clock: Supermarket Session Ended :alarm_clock:**',
+            title = '**:alarm_clock: Amusement Park Session Ended :alarm_clock:**',
             colour = discord.Colour.purple()
         )
         embed.add_field(name = 'Hosted By', value = '{}'.format(messageAuthor), inline = 'false')
